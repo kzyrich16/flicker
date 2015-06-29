@@ -9,6 +9,9 @@
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?sensor=false">
     </script>
+    <script type ="text/javascript"
+      src="http://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=104a07b4b683d9dd192e30080afdb74f">
+    </script>
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
@@ -22,11 +25,15 @@
     </script>
   </head>
   <body>
-    <!--<img class="search" src="https://cdn2.iconfinder.com/data/icons/blue-bits-basic-and-bonus/128/011.png">-->
+    <header> 
+    <h1>Flickr Search</h1>
+    </header>
     <div class="row">
       <div class="col-md-4"></div>
+      <div class="col-md-4">
       <input type="text" id="searchbar" placeholer="What do you want to find?" />
-      <button type="submit">Search</button>
+      <button class="btn btn-primary" type="submit">Search</button>
+      </div>
       <div class="col-md-4"></div>
     </div>
     <div class="row">

@@ -4,3 +4,11 @@ html, body, #map-canvas {
     padding: 0;
 }
 
+.btn{
+    position: absolute;
+    width: 100px;
+}
+
+.header {
+    text-align: center;
+}
