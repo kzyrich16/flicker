@@ -9,6 +9,14 @@ html, body, #map-canvas {
     width: 100px;
 }
 
-.header {
+h1 {
+    font-family: 'Indie Flower', cursive;
     text-align: center;
+    color: #66B4DC;
+}
+
+body {
+    text-align:center;
+    background:url(http://www.steamcontests.com/wp-content/uploads/2013/12/cool-blue-abstract-hd-cool-blue-abstract-background.jpg);
+    background-repeat:no-repeat;
 }
