@@ -7,7 +7,18 @@
     <link type="text.css" rel="stylesheet" href="index.css">
     <script src="index.js"></script>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW2o_uCF199BRK0HsgAE-Zs5DHivwMOdw">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZzEPPwIEyll8rrHx16A0aMagvarO1qHg">
+    </script>
+    script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: -34.397, lng: 150.644},
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
   <body>
