@@ -6,33 +6,41 @@
     <title>Flicker Project</title>
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link type="text.css" rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="index.js"></script>
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?sensor=false">
     </script>
-    <script type ="text/javascript"
-      src="http://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=104a07b4b683d9dd192e30080afdb74f">
+    <script id="flickr" type ="text/javascript">
     </script>
     <script type="text/javascript">
       function initialize() {
+        var myLatlng = new google.maps.LatLng(39.8282, -98.5795);
         var mapOptions = {
           center: { lat: 39.8282, lng: -98.5795},
           zoom: 4,
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Hello World!'
+        });
+        $(marker).on("click", function () {
+          alert("clicked");
+        });
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
   <body>
-    <header> </header>
-    <h1>Flickr Search</h1>
+    <header><h1>Flickr Search</h1></header>
     <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4">
-      <input type="text" id="searchbar" placeholer="What do you want to find?" />
-      <button id=search class="btn btn-primary" type="submit">Search</button>
+      <input type="text" id="searchbar" placeholder="What do you want to find?">
+      <button id="search" class="btn btn-primary" type="submit">Search</button>
       </div>
       <div class="col-md-4"></div>
     </div>
@@ -41,5 +49,15 @@
       <div class="col-md-4" id="map-canvas"></div>
       <div class="col-md-4"></div>
     </div>
+    <script>
+      $(document).ready(function () {
+        var theTag = $("#searchbar").val();
+        var theAPI = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=104a07b4b683d9dd192e30080afdb74f&tags=" + theTag + "&has_geo=1&extras=geo&format=json"
+        $("#search").on("click", function () {
+            $("#flickr").attr("src", theAPI);
+            console.log($("#flickr").attr("src"));
+        });
+      });
+    </script>
   </body>
 </html>
