@@ -17,7 +17,7 @@
       function initialize() {
         var mapOptions = {
           center: { lat: 39.8282, lng: -98.5795},
-          zoom: 4
+          zoom: 4,
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
@@ -32,7 +32,7 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
       <input type="text" id="searchbar" placeholer="What do you want to find?" />
-      <button class="btn btn-primary" type="submit">Search</button>
+      <button id=search class="btn btn-primary" type="submit">Search</button>
       </div>
       <div class="col-md-4"></div>
     </div>
