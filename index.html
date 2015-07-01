@@ -1,41 +1,28 @@
 <!doctype html>
 <html>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Istok+Web:700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>Flicker Project</title>
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link type="text.css" rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="index.js"></script>
+
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?sensor=false">
     </script>
-    <script id="flickr" type ="text/javascript"
-    src="https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=104a07b4b683d9dd192e30080afdb74f&has_geo=1&extras=geo&format=json">
+    <script id="flickr" type ="text/javascript">
     </script>
+    <script src="index.js"></script>
   </head>
   <body>
     <header>
-      <img src="https://www.timothypflaniganmd.com/wp-content/uploads/2014/12/flickr-logo-transparent.png" id="logo" alt="HTML5 Icon" style="width:100px;height:75px;">
-    <!--  <h1>flickr Search</h1></header>-->
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
+      <img src="http://www.parklandsphotoclub.org.au/Common/Images/Flickr-logo2.png" id="logo" alt="HTML5 Icon" width="150">
+    </header>
+    <div class="things">
       <input type="text" id="input" placeholder="What do you want to find?" />
-      <a href="#" id="search" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-search"></span> Search</a>
+      <i id="search" class="fa fa-search"></i>
+      <i id="clear" class="fa fa-times"></i>
       </div>
-      <div class="col-md-4"></div>
-    </div>
-    <div class="row">
-      <div class="col-md-4"></div>
       <div class="col-md-4" id="map-canvas"></div>
-      <div class="col-md-4"></div>
-    </div>
-     <div class="row">
-      <div class="col-md-4"></div>
-       <div class="col-md-4"></div>
-       <a href="#" id:"clear" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-minus-sign"></span> Clear</a>
-    </div>
   </body>
 </html>
